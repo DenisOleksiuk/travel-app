@@ -1,0 +1,46 @@
+@import '../../../scss/abstracts.scss';
+
+.vcontrol {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  grid-area: vcontrol;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.vcontrol::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  content: '';
+  @include size(1px, calc(100% - 20px));
+}
+
+.title {
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 0;
+  border-radius: 20px;
+  outline: none;
+  transition: width 0.5s ease, font-size 0.5s ease;
+  @include size(100%);
+}
+
+.title:hover {
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.title.active {
+  font-weight: 600;
+}
+
+.title.no-active {
+  font-size: 8px;
+  @include size(55px);
+}

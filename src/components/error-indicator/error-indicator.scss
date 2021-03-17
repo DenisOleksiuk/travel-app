@@ -1,0 +1,19 @@
+.error__indicator {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: Merriweather;
+  font-size: 20px;
+  color: red;
+  height: 100vh;
+  background-color: antiquewhite;
+  width: 100%;
+}
+
+.error__indicator-img {
+  width: 50%;
+}
+
+.error__indicator > span {
+  margin-top: 5px;
+}

@@ -1,0 +1,23 @@
+.headerAuthBlockWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+}
+
+.headerAuthBlockText {
+  color: #fff;
+  font-size: 12px;
+}
+
+.headerAuthBlockButton {
+  width: 130px;
+  height: 25px;
+  min-height: 25px;
+  margin-left: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+}

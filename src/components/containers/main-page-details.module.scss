@@ -1,0 +1,5 @@
+@import '../../scss/abstracts.scss';
+
+.mainContent {
+  @include size(100vw, 100vh);
+}

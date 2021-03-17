@@ -1,0 +1,139 @@
+@import '../../../scss/abstracts.scss';
+$title-size: 90px;
+
+.sliderTextBlock {
+  display: flex;
+  flex-direction: column;
+  grid-area: text;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.titleBlock {
+  position: relative;
+  margin-bottom: 20px;
+  overflow-y: hidden;
+  @include size(auto, $title-size);
+}
+
+.mover {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  transition: top 1s ease;
+}
+
+.title {
+  color: #fff;
+  font-weight: 800;
+  font-size: $title-size;
+  line-height: 1;
+  transition: opacity 1s ease;
+  @include size(auto, $title-size);
+}
+
+.title.active,
+.text.active {
+  opacity: 1;
+}
+
+.title.no-active,
+.text.no-active {
+  opacity: 0;
+}
+
+.textBlock {
+  position: relative;
+  overflow-y: hidden;
+  @include size(auto, $title-size);
+}
+
+.text {
+  color: #fff;
+  font-weight: 500;
+  @include size(auto, $title-size);
+}
+
+@media (max-width: 959px) {
+  $title-size: 80px;
+
+  .titleBlock {
+    @include size(auto, $title-size);
+  }
+
+  .title {
+    font-size: $title-size;
+    @include size(auto, $title-size);
+  }
+
+  .textBlock {
+    @include size(auto, $title-size);
+  }
+
+  .text {
+    @include size(auto, $title-size);
+  }
+}
+
+@media (max-width: 869px) {
+  $title-size: 65px;
+
+  .titleBlock {
+    @include size(auto, $title-size);
+  }
+
+  .title {
+    font-size: $title-size;
+    @include size(auto, $title-size);
+  }
+
+  .textBlock {
+    @include size(auto, $title-size);
+  }
+
+  .text {
+    @include size(auto, $title-size);
+  }
+}
+
+@media (max-width: 449px) {
+  $title-size: 55px;
+
+  .titleBlock {
+    @include size(auto, $title-size);
+  }
+
+  .title {
+    font-size: $title-size;
+    @include size(auto, $title-size);
+  }
+
+  .textBlock {
+    @include size(auto, $title-size);
+  }
+
+  .text {
+    @include size(auto, $title-size);
+  }
+}
+
+@media (max-width: 399px) {
+  $title-size: 35px;
+
+  .titleBlock {
+    @include size(auto, $title-size);
+  }
+
+  .title {
+    font-size: $title-size;
+    @include size(auto, $title-size);
+  }
+
+  .textBlock {
+    @include size(auto, $title-size);
+  }
+
+  .text {
+    @include size(auto, $title-size);
+  }
+}

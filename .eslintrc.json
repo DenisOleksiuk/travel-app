@@ -1,0 +1,31 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended", 
+    "airbnb",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "globalReturn": false,
+      "jsx": true
+    },
+    "babelOptions": {
+      "configFile": "./babel.config.json"
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "allowImportExportEverywhere": false
+  },
+  "plugins": ["react"],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "arrow-body-style": ["error", "as-needed"],
+    "react/state-in-constructor": ["error", "never"]
+  }
+}

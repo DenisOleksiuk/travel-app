@@ -1,0 +1,95 @@
+@import '../../scss/abstracts.scss';
+
+.authPageWrapper {
+  position: fixed;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  @include size(100vw, 100vh);
+}
+
+.authPageContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  @include size(270px, 450px);
+}
+
+.authPageWrapperHidden {
+  display: none;
+}
+
+.authPageHeader {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+}
+
+.authPageError {
+  color: rgb(201, 10, 4);
+  font-size: 14px;
+}
+
+.authPageInput {
+  width: 190px;
+  height: 45px;
+  margin-bottom: 10px;
+  padding: 0 15px;
+  font-size: 14px;
+  background: rgb(211, 211, 211);
+  border: 0;
+  border-radius: 50px;
+  outline: none;
+}
+
+.authPageInput::placeholder {
+  font-size: 14px;
+}
+
+.authPageButton {
+  width: 70%;
+  height: 45px;
+  color: #fff;
+  font-weight: 600;
+  background: rgb(145, 182, 197);
+  background: linear-gradient(
+    180deg,
+    rgba(145, 182, 197, 1) 0%,
+    rgba(38, 81, 135, 1) 100%
+  );
+  border: 0;
+  border-radius: 50px;
+  outline: none;
+}
+
+.authPageText {
+  color: #00f;
+  font-size: 14px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: #8a8a8a;
+  background: none;
+  border: 2px solid #8a8a8a;
+  border-radius: 50px;
+}
+
+.closeButton:hover {
+  color: rgb(74, 74, 75);
+  border: 2px solid rgb(74, 74, 75);
+}

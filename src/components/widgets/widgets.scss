@@ -1,0 +1,102 @@
+.widgets {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 25px;
+  padding-right: 0;
+  color: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(145, 182, 197, 1) 0%,
+    rgba(38, 81, 135, 1) 100%
+  );
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0px 31px 35px -26px #080c21;
+}
+
+.date {
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.city {
+  padding-top: 5px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.temp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  color: #fff;
+  font-weight: 100;
+}
+
+.degrees {
+  padding-left: 20px;
+  font-size: 35px;
+}
+
+.widget-weather-point {
+  margin-bottom: 20px;
+  padding: 10px 0;
+  padding-right: 20px;
+  text-align: center;
+  border: 1px dashed;
+  border-right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.description__text {
+  font-variant-caps: all-petite-caps;
+}
+
+.widget__date {
+  padding-top: 5px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.widget__time {
+  display: block;
+  font-size: 35px;
+  text-align: center;
+}
+
+.widget-date-point {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  padding-right: 25px;
+  text-align: center;
+  border: 1px dashed;
+  border-right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.widget-currency-point {
+  padding: 10px 0;
+  padding-right: 20px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px dashed;
+  border-right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.currency__paragraph {
+  margin: 5px;
+}
+
+.currency__flag {
+  display: inline;
+}

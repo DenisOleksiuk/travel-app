@@ -1,0 +1,97 @@
+@import '../../../scss/abstracts.scss';
+
+.sliderBlock {
+  position: relative;
+  display: flex;
+  grid-area: slider;
+  align-items: flex-end;
+  padding-bottom: 80px;
+}
+
+.carousel {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%);
+  transition: left 1s ease;
+  @include size(100%);
+}
+
+.slideCard {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  height: 250px;
+  margin-right: 20px;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  background-size: cover !important;
+  border-radius: 5px;
+  box-shadow: 0 0 5px -1px #fff;
+  transition: all 1s ease;
+}
+
+.slideCard:hover {
+  box-shadow: 0 0 5px 3px #fff;
+}
+
+.slideCard .title {
+  font-weight: 600;
+}
+
+.slideCard .subtitle {
+  font-size: 13px;
+}
+
+.slideCard.active {
+  height: 300px;
+}
+
+.slideCard.no-active {
+  height: 250px;
+}
+
+.slideCard.show {
+  opacity: 1;
+}
+
+.slideCard.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pagination {
+  display: flex;
+}
+
+.pagination button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  padding: 10px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 0;
+  border-radius: 50px;
+  outline: none;
+  @include size(40px, 40px);
+}
+
+.pagination button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 739px) {
+  .sliderBlock {
+    justify-content: center;
+    padding-bottom: 5px;
+  }
+
+  .pagination button {
+    @include size(30px, 30px);
+  }
+}

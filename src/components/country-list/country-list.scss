@@ -1,0 +1,37 @@
+@import '../../scss/abstracts.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  @include size(100vw, calc(100vh - 80px));
+}
+
+.card {
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+
+.countryTitle {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.countri__title {
+  text-align: center;
+}
+
+.country__img {
+  display: block;
+  width: 250px;
+  margin: auto;
+}
+
+.country__list {
+  display: flex;
+  flex-direction: column;
+}
+  
+  
+

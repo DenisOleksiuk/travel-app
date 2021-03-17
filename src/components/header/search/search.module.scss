@@ -1,0 +1,31 @@
+@import '../../../scss/abstracts.scss';
+
+.searchInput {
+  padding-left: 7px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  @include size(150px, 25px);
+}
+
+.searchInput::-webkit-search-cancel-button {
+  background: url('../../../assets/images/cancel.png');
+  background-size: cover;
+  cursor: pointer;
+  opacity: 0.8;
+  -webkit-appearance: none;
+  @include size(15px, 15px);
+}
+
+.searchButton {
+  color: #fff;
+  background: none;
+  border: 0;
+  outline: none;
+  transition: transform 0.5s ease;
+}
+
+.searchButton:hover {
+  transform: rotate(180deg);
+}

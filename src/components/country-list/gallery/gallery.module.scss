@@ -1,0 +1,156 @@
+@import '../../../scss/abstracts.scss';
+
+.galleryWrapper {
+  display: grid;
+  grid-template-areas:
+    'attr-img attr-desc'
+    'attr-img attr-rate'
+    'attr-img attr-nav';
+  grid-template-rows: 350px 70px 180px;
+  grid-template-columns: 45vw 45vw;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  overflow: hidden;
+  @include size(90vw);
+}
+
+.attrImg {
+  position: relative;
+  display: flex;
+  grid-area: attr-img;
+  align-items: flex-end;
+  padding: 30px 20px;
+  background: #000;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.attrImgOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 38%,
+    rgba(0, 0, 0, 0.44021358543417366) 100%
+  );
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  @include size(100%, 100%);
+}
+
+.attrImg .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position-x: center !important;
+  background-size: auto 600px !important;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  transition: opacity 1s ease;
+  pointer-events: none;
+  @include size(100%, 100%);
+}
+
+.attrImg .image.active {
+  opacity: 1;
+}
+
+.attrImg .image.no-active {
+  opacity: 0;
+}
+
+.pagination {
+  position: relative;
+  z-index: 2;
+  display: flex;
+}
+
+.pagination button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  padding: 10px;
+  color: #fff;
+  background: none;
+  border: 0;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  outline: none;
+  @include size(40px, 40px);
+}
+
+.pagination button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.attrDesc {
+  display: flex;
+  flex-direction: column;
+  grid-area: attr-desc;
+  padding: 20px;
+  padding-top: 80px;
+  background: #fff;
+  border-top-right-radius: 25px;
+}
+
+.attrDesc span {
+  display: block;
+}
+
+.attrDesc .title {
+  margin-bottom: 20px;
+  font-weight: 800;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.attrNav {
+  position: relative;
+  grid-area: attr-nav;
+  background: #fff;
+  border-bottom-right-radius: 25px;
+}
+
+.attrNav .attrMover {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  height: 150px;
+  transform: translateY(-50%);
+}
+
+.attrMover .image {
+  min-width: 100px;
+  height: 150px;
+  margin-right: 10px;
+  background-size: cover !important;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px rgb(105, 105, 105);
+  transition: height 0.5s ease;
+}
+
+.attrMover .image:hover {
+  box-shadow: 0 0 5px 3px #fff inset;
+  cursor: pointer;
+}
+
+.attrMover .image.active {
+  height: 140px;
+}
+
+.attrMover .image.no-active {
+  height: 120px;
+}
+
+.attrRate {
+  grid-area: attr-rate;
+  padding: 5px 20px;
+  background: #fff;
+}

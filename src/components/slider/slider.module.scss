@@ -1,0 +1,53 @@
+@import '../../scss/abstracts.scss';
+
+.slider {
+  position: relative;
+  display: grid;
+  grid-template-areas: 'vcontrol text slider';
+  grid-template-columns: 100px 1.2fr 1fr;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  overflow-x: hidden;
+  background: #000;
+  @include size(100%, 100%);
+}
+
+.slider * {
+  position: relative;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
+  @include size(100%, 100%);
+}
+
+.mainImg {
+  position: absolute;
+  z-index: 0;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  @include size(100%, 100%);
+}
+
+.mainImg.active {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.mainImg.no-active {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+@media (max-width: 739px) {
+  .slider {
+    grid-template-areas:
+      'vcontrol text'
+      'vcontrol slider';
+    grid-template-rows: 1fr 1.5fr;
+    grid-template-columns: 100px 1fr;
+  }
+}
